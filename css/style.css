@@ -243,6 +243,13 @@ body {
   right: -35px;
 }
 
+@media (min-width: 2400px) {
+  .contacts__trace {
+    position: absolute;
+    top: -25px;
+    left: 74%;
+  }
+}
 @media (max-width: 1200px) {
   .contacts__connection {
     margin-left: 10px;
