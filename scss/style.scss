@@ -1,0 +1,525 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+}
+
+input,
+button,
+textarea {
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+html,
+body {
+	height: 100%;
+	color: #1b274a;
+	font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 400;
+}
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.main {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+.__container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.breadcrumbs {
+	margin: 42px 0px 58px 0px;
+	&__list {
+		display: flex;
+		// flex-wrap: wrap;//! если нужен перенос строки
+		//overflow-y: auto;//! если нужен скролл на мобильном телефоне
+		overflow-y: auto;
+		padding: 6px 0;
+		&::before {
+			content: "";
+			position: relative;
+			bottom: 5px;
+			min-width: 25px;
+			min-height: 24px;
+			background-size: 25px 24px;
+			background: url("../img/home.svg") top center no-repeat;
+		}
+	}
+	&__item {
+		position: relative;
+		padding-right: 26px;
+		padding-left: 5px;
+	}
+	&__item::after {
+		content: ">";
+		position: absolute;
+		top: 3px;
+		right: 10px;
+		color: #ffc38d;
+	}
+	&__item:last-child::after {
+		display: none;
+	}
+
+	&__link {
+		font-size: 14px;
+		line-height: 24px;
+		color: rgba(255, 161, 77, 0.64);
+	}
+	// * цвет "хлебных крошек" для текущей страницы
+	&__link--active {
+		color: #ff7800;
+	}
+	// * цвет "хлебных крошек" для текущей страницы
+}
+
+.contacts {
+	position: relative;
+	margin-bottom: 64px;
+
+	&__title {
+		font-weight: 500;
+		font-size: 46px;
+		line-height: 69px;
+		/* or 150% */
+
+		/* 1B274A */
+		color: #1b274a;
+		margin-bottom: 48px;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__hospital {
+		width: 300px;
+		position: relative;
+		padding-right: 100px;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 3px;
+			height: 190px;
+			background: #ffc38d;
+			border-radius: 8px;
+			top: 0;
+			right: 0;
+		}
+	}
+
+	&__inner-title,
+	&__inner-phone,
+	&__inner-email {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 33px;
+		color: #1b274a;
+	}
+
+	&__hospital-clock {
+	}
+
+	&__hospital-list {
+		li:last-child {
+			margin-top: 6px;
+		}
+	}
+
+	&__hospital-item {
+		margin-bottom: 18px;
+	}
+	&__inner-title {
+		margin-bottom: 32px;
+	}
+
+	&__shop {
+		width: 335px;
+		padding-right: 48px;
+
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 3px;
+			height: 190px;
+			background: #ffc38d;
+			border-radius: 8px;
+			top: 0;
+			right: 0;
+		}
+	}
+
+	&__shop-list {
+		li:last-child {
+			margin-top: 6px;
+		}
+	}
+
+	&__shop-item {
+		margin-bottom: 18px;
+	}
+	&__connection {
+		align-self: center;
+		width: 270px;
+		margin-right: 60px;
+		padding-bottom: 20px;
+	}
+
+	&__connection-title {
+	}
+
+	&__connection-btn {
+		display: flex;
+		justify-content: center;
+		background-color: #ff7800;
+		border-radius: 4px;
+		padding: 16px 52px 16px 32px;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			background-color: #ffa14d;
+		}
+		&:active {
+			background-color: #b35300;
+		}
+		span {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 21px;
+			color: #ffffff;
+			padding-right: 10px;
+		}
+	}
+
+	&__trace {
+		position: absolute;
+		top: -25px;
+		left: 83%;
+	}
+}
+
+.contacts__shop-clock,
+.contacts__hospital-clock {
+	span {
+		position: relative;
+		svg {
+			position: absolute;
+			top: -28px;
+			right: -35px;
+		}
+	}
+}
+.social {
+	background: rgba(56, 151, 240, 0.1);
+
+	&__inner {
+		padding: 25px 0px;
+
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 3px;
+			background: #ffc38d;
+			border-radius: 8px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+	}
+	&__list {
+		display: flex;
+		justify-content: center;
+		li a {
+			margin-right: 64px;
+		}
+		li:last-child a {
+			margin-right: 0;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+	&__item-img {
+		margin-right: 24px;
+	}
+	&__item-link {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 32px;
+		color: #ff7800;
+	}
+}
+
+// медиа запросы
+@media (min-width: 2400px) {
+	.contacts__trace {
+		position: absolute;
+		top: -25px;
+		left: 74%;
+	}
+}
+@media (max-width: 1200px) {
+	.contacts {
+		&__connection {
+			margin-left: 10px;
+		}
+		&__shop {
+			margin-left: 10px;
+		}
+		&__inner {
+		}
+	}
+}
+@media (max-width: 1005px) {
+	.breadcrumbs {
+		margin: 26px 0px 42px;
+	}
+
+	.contacts {
+		margin-bottom: 48px;
+		&__inner {
+			flex-wrap: wrap;
+			justify-content: start;
+		}
+		&__title {
+			margin-bottom: 32px;
+		}
+		&__inner-title {
+			margin-bottom: 24px;
+		}
+		&__connection {
+			margin-left: 0px;
+			padding: 20px 0px 0px 0px;
+		}
+		&__hospital {
+			width: auto;
+			padding-right: 30px;
+		}
+		&__shop {
+			width: 50%;
+			margin-left: 20px;
+			padding-right: 0;
+			&::after {
+				display: none;
+			}
+		}
+		&__trace {
+			top: 62%;
+			left: 54%;
+		}
+	}
+	.social {
+		&__list {
+			display: flex;
+			justify-content: space-between;
+			li a {
+				display: none;
+			}
+		}
+		&__item-img {
+			width: 40px;
+			height: 40px;
+		}
+	}
+	h1 {
+		font-size: 36px !important;
+		line-height: 40px !important;
+	}
+	h3 {
+		font-size: 22px !important;
+		line-height: 33px !important;
+	}
+	.__container {
+		max-width: 576px;
+	}
+}
+@media (max-width: 700px) {
+	.contacts {
+		&__shop {
+			width: auto;
+		}
+	}
+}
+@media (max-width: 590px) {
+	.breadcrumbs {
+		margin: 18px 0px 26px;
+	}
+	.contacts {
+		&__connection {
+			padding-top: 20px;
+			margin-left: 0px;
+			width: 100%;
+			margin-right: 0;
+			button {
+				width: 100%;
+			}
+		}
+		&__title {
+			margin-bottom: 24px;
+		}
+		&__hospital {
+			margin-bottom: 24px;
+			&::after {
+				display: none;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				height: 2px;
+				width: 156px;
+				background: #ffc38d;
+				border-radius: 8px;
+				left: 0;
+				top: 100%;
+			}
+		}
+
+		&__hospital-item,
+		&__shop-item {
+			margin-bottom: 8px;
+		}
+		&__hospital-list,
+		&__shop-list {
+			margin-bottom: 24px;
+			li:last-child {
+				margin-top: 16px;
+				margin-bottom: 0px;
+			}
+		}
+		&__shop {
+			width: 100%;
+			margin-left: 0px;
+			&::before {
+				content: "";
+				position: absolute;
+				height: 2px;
+				width: 156px;
+				background: #ffc38d;
+				border-radius: 8px;
+				left: 0;
+				top: 100%;
+			}
+		}
+		&__trace {
+			top: 21%;
+			left: 67%;
+			width: 100px;
+			height: 100px;
+		}
+	}
+	.social {
+		&__inner {
+			padding: 10px 0px;
+
+			&::after {
+				display: none;
+			}
+		}
+		&__list {
+			justify-content: space-around;
+		}
+		&__item-img {
+			width: 30px;
+			height: 30px;
+		}
+	}
+	h1 {
+		font-size: 24px !important;
+		line-height: 32px !important;
+	}
+	h3 {
+		font-size: 18px !important;
+		line-height: 22px !important;
+	}
+	.contacts__inner-email,
+	.contacts__inner-phone {
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.contacts__connection-btn {
+		font-size: 16px;
+	}
+	.contacts__shop-clock,
+	.contacts__hospital-clock {
+		span {
+			svg {
+				width: 35px;
+				height: 35px;
+				top: -23px;
+				right: -30px;
+			}
+		}
+	}
+}
+@media (max-width: 450px) {
+}
