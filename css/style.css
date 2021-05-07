@@ -114,7 +114,7 @@ body {
 .breadcrumbs__list::before {
   content: "";
   position: relative;
-  bottom: 6px;
+  bottom: 5px;
   min-width: 25px;
   min-height: 24px;
   background-size: 25px 24px;
@@ -128,7 +128,7 @@ body {
 .breadcrumbs__item::after {
   content: ">";
   position: absolute;
-  top: 1px;
+  top: 3px;
   right: 10px;
   color: #ffc38d;
 }
@@ -146,6 +146,7 @@ body {
 
 .contacts {
   position: relative;
+  margin-bottom: 64px;
 }
 .contacts__title {
   font-weight: 500;
@@ -218,13 +219,25 @@ body {
   padding-bottom: 20px;
 }
 .contacts__connection-btn {
-  background: #ff7800;
+  display: flex;
+  justify-content: center;
+  background-color: #ff7800;
   border-radius: 4px;
-  padding: 16px 72px 16px 32px;
+  padding: 16px 52px 16px 32px;
+  transition: all 0.3s ease 0s;
+}
+.contacts__connection-btn:hover {
+  background-color: #ffa14d;
+}
+.contacts__connection-btn:active {
+  background-color: #b35300;
+}
+.contacts__connection-btn span {
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
   color: #ffffff;
+  padding-right: 10px;
 }
 .contacts__trace {
   position: absolute;
@@ -243,6 +256,49 @@ body {
   right: -35px;
 }
 
+.social {
+  background: rgba(56, 151, 240, 0.1);
+}
+.social__inner {
+  padding: 25px 0px;
+  position: relative;
+}
+.social__inner::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #ffc38d;
+  border-radius: 8px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.social__list {
+  display: flex;
+  justify-content: center;
+}
+.social__list li a {
+  margin-right: 64px;
+}
+.social__list li:last-child a {
+  margin-right: 0;
+}
+.social__item {
+  display: flex;
+  align-items: center;
+}
+.social__item-img {
+  margin-right: 24px;
+}
+.social__item-link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ff7800;
+}
+
 @media (min-width: 2400px) {
   .contacts__trace {
     position: absolute;
@@ -259,13 +315,26 @@ body {
   }
 }
 @media (max-width: 1005px) {
+  .breadcrumbs {
+    margin: 26px 0px 42px;
+  }
+
+  .contacts {
+    margin-bottom: 48px;
+  }
   .contacts__inner {
     flex-wrap: wrap;
     justify-content: start;
   }
+  .contacts__title {
+    margin-bottom: 32px;
+  }
+  .contacts__inner-title {
+    margin-bottom: 24px;
+  }
   .contacts__connection {
-    padding-top: 20px;
     margin-left: 0px;
+    padding: 20px 0px 0px 0px;
   }
   .contacts__hospital {
     width: auto;
@@ -274,6 +343,7 @@ body {
   .contacts__shop {
     width: 50%;
     margin-left: 20px;
+    padding-right: 0;
   }
   .contacts__shop::after {
     display: none;
@@ -282,10 +352,17 @@ body {
     top: 62%;
     left: 54%;
   }
-}
-@media (max-width: 700px) {
-  .contacts__shop {
-    width: auto;
+
+  .social__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .social__list li a {
+    display: none;
+  }
+  .social__item-img {
+    width: 40px;
+    height: 40px;
   }
 
   h1 {
@@ -297,8 +374,21 @@ body {
     font-size: 22px !important;
     line-height: 33px !important;
   }
+
+  .__container {
+    max-width: 576px;
+  }
+}
+@media (max-width: 700px) {
+  .contacts__shop {
+    width: auto;
+  }
 }
 @media (max-width: 590px) {
+  .breadcrumbs {
+    margin: 18px 0px 26px;
+  }
+
   .contacts__connection {
     padding-top: 20px;
     margin-left: 0px;
@@ -307,6 +397,9 @@ body {
   }
   .contacts__connection button {
     width: 100%;
+  }
+  .contacts__title {
+    margin-bottom: 24px;
   }
   .contacts__hospital {
     margin-bottom: 24px;
@@ -323,6 +416,16 @@ body {
     border-radius: 8px;
     left: 0;
     top: 100%;
+  }
+  .contacts__hospital-item, .contacts__shop-item {
+    margin-bottom: 8px;
+  }
+  .contacts__hospital-list, .contacts__shop-list {
+    margin-bottom: 24px;
+  }
+  .contacts__hospital-list li:last-child, .contacts__shop-list li:last-child {
+    margin-top: 16px;
+    margin-bottom: 0px;
   }
   .contacts__shop {
     width: 100%;
@@ -343,6 +446,20 @@ body {
     left: 67%;
     width: 100px;
     height: 100px;
+  }
+
+  .social__inner {
+    padding: 10px 0px;
+  }
+  .social__inner::after {
+    display: none;
+  }
+  .social__list {
+    justify-content: space-around;
+  }
+  .social__item-img {
+    width: 30px;
+    height: 30px;
   }
 
   h1 {
