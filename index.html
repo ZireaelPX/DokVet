@@ -9,6 +9,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=01389225-48e4-4979-8e89-a2bec8af39c8&lang=ru_RU"
+		type="text/javascript"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script defer src="js/sctipt.js"></script>
 </head>
 
@@ -115,15 +118,115 @@
 					</div>
 				</div>
 			</div>
-			<script type="text/javascript" charset="utf-8" async
-				src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0b84c053fb58c8d85becca9041ddfe8276b7c412ee02aff866ca3ad4210d644e&amp;width=100%25&amp;height=700&amp;lang=ru_RU&amp;scroll=false"></script>
+
+			<div class="map-height" id="map_page" style="width: 100%; height: 700px"></div>
 		</main>
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta
+		asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta
+		asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta
+		asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta
+		asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta
+		asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta
+		asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta
+		asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta
+		asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta
+		asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta
+		asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta
+		asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta
+		asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta
+		asperiores
+		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
+		labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rem, ad itaque aspernatur soluta
+		asperiores
 		quisquam iure accusantium dicta velit nesciunt totam esse nulla quidem corporis voluptatibus quas deleniti
 		labore?
 		<footer class="footer">
 		</footer>
 	</div>
+	<script>
+
+		ymaps.ready(init);
+		//Set default center and zoom
+		function init() {
+			myMap = new ymaps.Map('map_page', {
+				center: [59.914989, 30.455071],
+				zoom: 17,
+				behaviors: ['drag'],
+			});
+
+
+			//Set user Icon
+			s = {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/logo.svg',
+				iconImageSize: [80, 80],
+				iconImageOffset: [-40, -80]
+			};
+			//Set some points
+			m = {
+				m1: new ymaps.Placemark([59.914989, 30.455071], {}, s),
+				m1center: [59.914989, 30.455071],
+			};
+			//Disabled scroll
+			//myMap.behaviors.disable('scrollZoom');
+			//on mobile disable touch
+			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				//... отключаем перетаскивание карты
+				myMap.behaviors.disable('drag');
+			}
+			//Add points on the map
+			myMap.geoObjects
+				.add(m['m1']);
+
+			// ON RESIZE
+			//Get curent center and zoom
+			var pixelCenter = myMap.getGlobalPixelCenter('map_page');
+			//
+			function onResizeMap() {
+				if ($(window).width() > '1005') {
+					//Set New center
+					myMap.setCenter([59.914989, 30.452188]);
+					var pixelCenter2 = myMap.getGlobalPixelCenter('map_page');
+					console.log(pixelCenter2);
+				} else {
+					myMap.setCenter([59.914989, 30.455071]);
+				}
+			} onResizeMap();
+
+			window.onresize = function () {
+				onResizeMap();
+			};
+		};
+	</script>
 </body>
 
 </html>

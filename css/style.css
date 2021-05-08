@@ -299,6 +299,10 @@ body {
   color: #ff7800;
 }
 
+.yandex-cards {
+  height: 800px;
+}
+
 @media (min-width: 2400px) {
   .contacts__trace {
     position: absolute;
@@ -377,6 +381,10 @@ body {
 
   .__container {
     max-width: 576px;
+  }
+
+  .map-height {
+    height: 600px !important;
   }
 }
 @media (max-width: 700px) {
@@ -488,5 +496,9 @@ body {
     height: 35px;
     top: -23px;
     right: -30px;
+  }
+
+  .map-height {
+    height: 320px !important;
   }
 }
