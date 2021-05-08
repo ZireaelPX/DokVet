@@ -360,6 +360,13 @@ body {
 }
 .address__info-way {
   color: #ff7800;
+  display: flex;
+  align-items: center;
+}
+.address__info-way svg {
+  margin-left: 18px;
+  width: 31px;
+  height: 14px;
 }
 
 .meta-info {
@@ -630,5 +637,15 @@ body {
 
   .map-height {
     height: 320px !important;
+  }
+}
+@media (max-width: 400px) {
+  .address__info-way {
+    color: #ff7800;
+    max-width: 300px;
+  }
+  .address__info-way svg {
+    width: 42px;
+    height: 20px;
   }
 }

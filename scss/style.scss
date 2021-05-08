@@ -377,6 +377,13 @@ body {
 
 	&__info-way {
 		color: #ff7800;
+		display: flex;
+		align-items: center;
+		svg {
+			margin-left: 18px;
+			width: 31px;
+			height: 14px;
+		}
 	}
 }
 .meta-info {
@@ -555,7 +562,6 @@ body {
 				top: 100%;
 			}
 		}
-
 		&__hospital-item,
 		&__shop-item {
 			margin-bottom: 8px;
@@ -638,7 +644,6 @@ body {
 		font-size: 24px !important;
 		line-height: 32px !important;
 	}
-
 	h3 {
 		font-size: 18px !important;
 		line-height: 22px !important;
@@ -664,5 +669,17 @@ body {
 	}
 	.map-height {
 		height: 320px !important;
+	}
+}
+@media (max-width: 400px) {
+	.address {
+		&__info-way {
+			color: #ff7800;
+			max-width: 300px;
+			svg {
+				width: 42px;
+				height: 20px;
+			}
+		}
 	}
 }
