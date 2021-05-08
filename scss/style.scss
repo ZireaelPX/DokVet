@@ -319,7 +319,9 @@ body {
 		color: #ff7800;
 	}
 }
-
+.yandex-cards {
+	height: 800px;
+}
 // медиа запросы
 @media (min-width: 2400px) {
 	.contacts__trace {
@@ -335,8 +337,6 @@ body {
 		}
 		&__shop {
 			margin-left: 10px;
-		}
-		&__inner {
 		}
 	}
 }
@@ -401,6 +401,9 @@ body {
 	}
 	.__container {
 		max-width: 576px;
+	}
+	.map-height {
+		height: 600px !important;
 	}
 }
 @media (max-width: 700px) {
@@ -519,6 +522,9 @@ body {
 				right: -30px;
 			}
 		}
+	}
+	.map-height {
+		height: 320px !important;
 	}
 }
 @media (max-width: 450px) {

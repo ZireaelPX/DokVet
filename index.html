@@ -183,14 +183,32 @@
 				behaviors: ['drag'],
 			});
 
+			MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+				'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+			),
 
-			//Set user Icon
-			s = {
-				iconLayout: 'default#image',
-				iconImageHref: 'img/logo.svg',
-				iconImageSize: [80, 80],
-				iconImageOffset: [-40, -80]
-			};
+				myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+					hintContent: 'Собственный значок метки',
+					balloonContent: 'Это красивая метка'
+				}, {
+					// Опции.
+					// Необходимо указать данный тип макета.
+					iconLayout: 'default#image',
+					// Своё изображение иконки метки.
+					iconImageHref: 'images/myIcon.gif',
+					// Размеры метки.
+					iconImageSize: [30, 42],
+					// Смещение левого верхнего угла иконки относительно
+					// её "ножки" (точки привязки).
+					iconImageOffset: [-5, -38]
+				}),
+				//Set user Icon
+				s = {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/logo.svg',
+					iconImageSize: [100, 100],
+					iconImageOffset: [-50, -100]
+				};
 			//Set some points
 			m = {
 				m1: new ymaps.Placemark([59.914989, 30.455071], {}, s),
@@ -219,6 +237,9 @@
 					console.log(pixelCenter2);
 				} else {
 					myMap.setCenter([59.914989, 30.455071]);
+					console.log(s.iconImageSize);
+					s.iconImageSize = [50, 50];
+					s.iconImageOffset = [-25, -50];
 				}
 			} onResizeMap();
 
