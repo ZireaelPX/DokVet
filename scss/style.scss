@@ -111,24 +111,23 @@ body {
 	}
 	&__item {
 		position: relative;
-		padding-right: 26px;
-		padding-left: 5px;
-	}
-	&__item::after {
-		content: ">";
-		position: absolute;
-		top: 3px;
-		right: 10px;
-		color: #ffc38d;
-	}
-	&__item:last-child::after {
-		display: none;
+		padding-right: 20px;
+		margin: 0 6px;
+		&::after {
+			content: ">";
+			position: absolute;
+			right: 0px;
+			font-size: 19px;
+		}
+		&:last-child::after {
+			display: none;
+		}
 	}
 
 	&__link {
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 24px;
-		color: rgba(255, 161, 77, 0.64);
+		color: #3897f0;
 	}
 	// * цвет "хлебных крошек" для текущей страницы
 	&__link--active {
@@ -182,9 +181,6 @@ body {
 		color: #1b274a;
 	}
 
-	&__hospital-clock {
-	}
-
 	&__hospital-list {
 		li:last-child {
 			margin-top: 6px;
@@ -229,9 +225,6 @@ body {
 		width: 270px;
 		margin-right: 60px;
 		padding-bottom: 20px;
-	}
-
-	&__connection-title {
 	}
 
 	&__connection-btn {
@@ -319,6 +312,80 @@ body {
 		color: #ff7800;
 	}
 }
+.address {
+	position: relative;
+	font-weight: 500;
+	&__info {
+		// display: none;
+		// position: absolute;
+		// z-index: 100;
+		// bottom: 48px;
+		// top: 48px;
+		// right: 50%;
+		// left: 5%;
+		// padding: 64px 100px;
+		// background-color: #ffffff;
+		// box-shadow: -10px 4px 32px rgba(0, 0, 0, 0.08);
+		// border-radius: 10px;
+		// width: 770px;
+		// height: 606px;
+		// display: flex;
+		// flex-direction: column;
+	}
+	&__decoration {
+		padding-bottom: 13px;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			background: rgba(255, 195, 141, 0.64);
+			border-radius: 8px;
+			height: 2px;
+			width: 69px;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	&__help {
+		font-size: 22px;
+		line-height: 33px;
+		color: #1b274a;
+	}
+
+	&__info-title {
+		font-size: 32px;
+		line-height: 40px;
+		margin-bottom: 32px;
+	}
+
+	&__info-metro {
+		display: flex;
+		svg {
+			margin-right: 18px;
+		}
+	}
+	&__info-timing {
+		margin: 32px 0px;
+	}
+
+	&__info-stopping {
+		margin-bottom: 18px;
+	}
+	&__info-parking {
+		margin-bottom: 48px;
+	}
+
+	&__info-way {
+		color: #ff7800;
+	}
+}
+.meta-info {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+	color: #6d758b;
+}
+
 .yandex-cards {
 	height: 800px;
 }
@@ -330,6 +397,17 @@ body {
 		left: 74%;
 	}
 }
+@media (max-width: 1400px) {
+	.address {
+		&__info {
+			right: 50%;
+			left: 5%;
+			padding: 64px 50px;
+			width: 670px;
+			height: 606px;
+		}
+	}
+}
 @media (max-width: 1200px) {
 	.contacts {
 		&__connection {
@@ -337,6 +415,14 @@ body {
 		}
 		&__shop {
 			margin-left: 10px;
+		}
+	}
+	.address {
+		&__info {
+			left: 5%;
+			padding: 64px 25px;
+			width: 580px;
+			height: 606px;
 		}
 	}
 }
@@ -391,6 +477,7 @@ body {
 			height: 40px;
 		}
 	}
+
 	h1 {
 		font-size: 36px !important;
 		line-height: 40px !important;
@@ -418,15 +505,6 @@ body {
 		margin: 18px 0px 26px;
 	}
 	.contacts {
-		&__connection {
-			padding-top: 20px;
-			margin-left: 0px;
-			width: 100%;
-			margin-right: 0;
-			button {
-				width: 100%;
-			}
-		}
 		&__title {
 			margin-bottom: 24px;
 		}
@@ -478,6 +556,23 @@ body {
 			left: 67%;
 			width: 100px;
 			height: 100px;
+		}
+		&__connection {
+			padding-top: 20px;
+			margin-left: 0px;
+			width: 100%;
+			margin-right: 0;
+		}
+		&__connection-title {
+			max-width: 270px;
+		}
+		&__connection-btn {
+			padding: 14px 60px;
+			// max-width: 270px;
+			span {
+				font-size: 14px;
+				line-height: 22px;
+			}
 		}
 	}
 	.social {

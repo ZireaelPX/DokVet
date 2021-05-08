@@ -122,23 +122,22 @@ body {
 }
 .breadcrumbs__item {
   position: relative;
-  padding-right: 26px;
-  padding-left: 5px;
+  padding-right: 20px;
+  margin: 0 6px;
 }
 .breadcrumbs__item::after {
   content: ">";
   position: absolute;
-  top: 3px;
-  right: 10px;
-  color: #ffc38d;
+  right: 0px;
+  font-size: 19px;
 }
 .breadcrumbs__item:last-child::after {
   display: none;
 }
 .breadcrumbs__link {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
-  color: rgba(255, 161, 77, 0.64);
+  color: #3897f0;
 }
 .breadcrumbs__link--active {
   color: #ff7800;
@@ -299,6 +298,60 @@ body {
   color: #ff7800;
 }
 
+.address {
+  position: relative;
+  font-weight: 500;
+}
+.address__decoration {
+  padding-bottom: 13px;
+  position: relative;
+}
+.address__decoration::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 195, 141, 0.64);
+  border-radius: 8px;
+  height: 2px;
+  width: 69px;
+  bottom: 0;
+  left: 0;
+}
+.address__help {
+  font-size: 22px;
+  line-height: 33px;
+  color: #1b274a;
+}
+.address__info-title {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 32px;
+}
+.address__info-metro {
+  display: flex;
+}
+.address__info-metro svg {
+  margin-right: 18px;
+}
+.address__info-timing {
+  margin: 32px 0px;
+}
+.address__info-stopping {
+  margin-bottom: 18px;
+}
+.address__info-parking {
+  margin-bottom: 48px;
+}
+.address__info-way {
+  color: #ff7800;
+}
+
+.meta-info {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6d758b;
+}
+
 .yandex-cards {
   height: 800px;
 }
@@ -310,12 +363,28 @@ body {
     left: 74%;
   }
 }
+@media (max-width: 1400px) {
+  .address__info {
+    right: 50%;
+    left: 5%;
+    padding: 64px 50px;
+    width: 670px;
+    height: 606px;
+  }
+}
 @media (max-width: 1200px) {
   .contacts__connection {
     margin-left: 10px;
   }
   .contacts__shop {
     margin-left: 10px;
+  }
+
+  .address__info {
+    left: 5%;
+    padding: 64px 25px;
+    width: 580px;
+    height: 606px;
   }
 }
 @media (max-width: 1005px) {
@@ -397,15 +466,6 @@ body {
     margin: 18px 0px 26px;
   }
 
-  .contacts__connection {
-    padding-top: 20px;
-    margin-left: 0px;
-    width: 100%;
-    margin-right: 0;
-  }
-  .contacts__connection button {
-    width: 100%;
-  }
   .contacts__title {
     margin-bottom: 24px;
   }
@@ -454,6 +514,22 @@ body {
     left: 67%;
     width: 100px;
     height: 100px;
+  }
+  .contacts__connection {
+    padding-top: 20px;
+    margin-left: 0px;
+    width: 100%;
+    margin-right: 0;
+  }
+  .contacts__connection-title {
+    max-width: 270px;
+  }
+  .contacts__connection-btn {
+    padding: 14px 60px;
+  }
+  .contacts__connection-btn span {
+    font-size: 14px;
+    line-height: 22px;
   }
 
   .social__inner {
