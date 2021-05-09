@@ -1,5 +1,8 @@
 "use strict"
-
+const changeHandler = e => {
+	const value = e.value;
+	e.value = value.replace(/\D/g, '')
+}
 document.addEventListener('DOMContentLoaded', function () {
 	const form = document.getElementById('form');
 	form.addEventListener('submit', formSend);
@@ -41,4 +44,5 @@ document.addEventListener('DOMContentLoaded', function () {
 		input.parentElement.classList.remove('_error');
 		input.classList.remove('_error');
 	}
+
 });

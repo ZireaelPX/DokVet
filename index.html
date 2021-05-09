@@ -9,8 +9,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style-min.css">
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=01389225-48e4-4979-8e89-a2bec8af39c8&lang=ru_RU"
-		type="text/javascript"></script>
 	<!-- !Замените API key на ваш -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script defer src="js/sctipt.js"></script>
@@ -225,6 +223,8 @@
 		<footer class="footer">
 		</footer>
 	</div>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=01389225-48e4-4979-8e89-a2bec8af39c8&lang=ru_RU"
+		type="text/javascript"></script>
 	<script>
 		ymaps.ready(init);
 		function init() {
@@ -265,10 +265,8 @@
 				if ($(window).width() > '1005') {
 					myMap.setCenter([59.915589, 30.451433]);
 					var pixelCenter2 = myMap.getGlobalPixelCenter('map_page');
-					console.log(pixelCenter2);
 				} else {
 					myMap.setCenter([59.914989, 30.455071]);
-					console.log(s.iconImageSize);
 					s.iconImageSize = [50, 50];
 					s.iconImageOffset = [-25, -50];
 				}
@@ -279,12 +277,7 @@
 			};
 		};
 	</script>
-	<script>
-		const changeHandler = e => {
-			const value = e.value;
-			e.value = value.replace(/\D/g, '')
-		}
-	</script>
+
 </body>
 
 </html>
