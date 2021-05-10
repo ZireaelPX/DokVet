@@ -8,7 +8,7 @@
 	<title>Контакты</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/style-min.css">
+	<link rel="stylesheet" href="css/style.css">
 	<!-- !Замените API key на ваш -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script defer src="js/sctipt.js"></script>
@@ -27,10 +27,12 @@
 						<li class="breadcrumbs__item">
 							<span class="breadcrumbs__link breadcrumbs__link--active">Контакты</span>
 						</li>
-
 					</ul>
+					<!-- breadcrumbs__list -->
 				</div>
+				<!-- __container -->
 			</div>
+			<!-- breadcrumbs -->
 			<section class="contacts">
 				<div class="__container">
 					<div class="contacts__block">
@@ -59,6 +61,7 @@
 									</li>
 								</ul>
 							</div>
+							<!-- contacts__hospital -->
 							<div class="contacts__shop">
 								<h3 class="contacts__inner-title contacts__shop-clock">
 									<span>Ветклиника и
@@ -79,6 +82,7 @@
 									</li>
 								</ul>
 							</div>
+							<!-- contacts__shop -->
 							<div class="contacts__connection">
 								<h3 class="contacts__inner-title contacts__connection-title">Хотите чтобы
 									мы сами
@@ -90,33 +94,50 @@
 									</svg>
 								</a>
 							</div>
-
+							<!-- contacts__connection -->
 						</div>
+						<!-- contacts__inner -->
 						<img class="contacts__trace" src="img/trace.png" alt="" srcset="">
 					</div>
-
+					<!-- contacts__block -->
 				</div>
+				<!-- __container -->
 			</section>
+			<!-- contacts -->
 			<div class="social">
 				<div class="__container">
 					<div class="social__inner">
 						<ul class="social__list">
 							<li class="social__item">
-								<img class="social__item-img" src="img/social/instagram.svg" alt="instagram">
-								<a class="social__item-link" href="#">/dokvet</a>
+								<a href="https://www.instagram.com/dokvet/">
+									<img class="social__item-img" src="img/social/instagram.svg"
+										alt="instagram">
+								</a>
+								<a class="social__item-link" href="https://www.instagram.com/dokvet/">/dokvet
+								</a>
 							</li>
+							<!-- social__item -->
 							<li class="social__item">
-								<img class="social__item-img" src="img/social/facebook.svg" alt="facebook">
-								<a class="social__item-link" href="#">/dokvetcom</a>
+								<a href="https://www.facebook.com/1vetspb/"><img class="social__item-img"
+										src="img/social/facebook.svg" alt="facebook"></a>
+								<a class="social__item-link"
+									href="https://www.facebook.com/1vetspb/">/dokvetcom</a>
 							</li>
+							<!-- social__item -->
 							<li class="social__item">
-								<img class="social__item-img" src="img/social/vkontakte.svg" alt="vkontakte">
-								<a class="social__item-link" href="#">/dokvet</a>
+								<a href="https://vk.com/dokvet"><img class="social__item-img"
+										src="img/social/vkontakte.svg" alt="vkontakte"></a>
+								<a class="social__item-link" href="https://vk.com/dokvet">/dokvet</a>
 							</li>
+							<!-- social__item -->
 						</ul>
+						<!-- social__list -->
 					</div>
+					<!-- social__inner -->
 				</div>
+				<!-- __container -->
 			</div>
+			<!-- social -->
 			<section class="address">
 				<div class="__container">
 					<div class="address__info">
@@ -127,6 +148,7 @@
 								<use xlink:href="img/icons.svg#metr"></use>
 							</svg> <span>Проспект Большевиков</span>
 						</h3>
+						<!-- address__info-metro -->
 						<div class="address__info-timing">
 							<div class="address__info-stopping  address__help">Автобусные остановки:</div>
 							<div class="address__info-meta meta-info">
@@ -140,21 +162,27 @@
 								</div>
 							</div>
 						</div>
+						<!-- address__info-timing -->
 						<div class="address__info-parking  address__help address__decoration">Парковка на
 							территории для
 							пациентов и их хозяев</div>
+						<!-- address__info-parking -->
 						<a class="address__info-way address__help"
 							href="https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&ll=30.451433%2C59.915589&mode=routes&origin=jsapi_2_1_78&rtext=~59.914989%2C30.455071&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.455%252C59.915%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%2520%25D0%259A%25D0%25BE%25D0%25BB%25D0%25BB%25D0%25BE%25D0%25BD%25D1%2582%25D0%25B0%25D0%25B9%252C%252011%25D0%25BA1&z=17">
-							<span>Построить маршрут на Яндекс.Карты</span><svg class="icon" width="31"
+							<span>Построить маршрут на Яндекс.Карты</span><svg class="icon icon-arrow" width="31"
 								height="14">
 								<use xlink:href="img/icons.svg#arrow"></use>
 							</svg>
 						</a>
+						<!-- address__info-way -->
 					</div>
+					<!-- address__info -->
 				</div>
+				<!-- __container -->
 				<div class="map-height" id="map_page" style="width: 100%; height: 700px"></div>
-
+				<!-- Яндекс-карта (скрипт в конце страницы) -->
 			</section>
+			<!-- address -->
 			<div class="form">
 				<div class="form__inon-01">
 					<img src="img/form/icon-01.png" alt="">
@@ -162,8 +190,6 @@
 				<div class="form__inon-02">
 					<img src="img/form/icon-02.png" alt="">
 				</div>
-
-
 				<div class="__container">
 					<div class="form__inner">
 						<div class="form__doctor doctor">
@@ -176,7 +202,6 @@
 							</div>
 							<img src="img/form/doctor-logo.svg" alt="" class="doctor__info-logo">
 						</div>
-
 						<div class=" form__question question">
 							<div class="question__title">
 								Возникли вопросы или жалобы?
@@ -189,19 +214,21 @@
 								<div class="form__input form__input1">
 									<input type="text" class="form__name _req" placeholder=" " maxlength="100">
 									<label class="form__label " for="">Имя <span>Заполните поле!</span></label>
-
 								</div>
+								<!-- form__input1 -->
 								<div class="form__input form__input2">
 									<input type="text" oninput="changeHandler(this)" class="form__number _req"
 										for="" placeholder=" " maxlength="12">
 									<label class="form__label" for="">Телефон <span>Заполните
 											поле!</span></label>
 								</div>
+								<!-- form__input2 -->
 								<div class="form__input form__input3">
 									<textarea type="comment" class="form__comment" maxlength="150"
 										placeholder=" "></textarea>
 									<label class="textarea__label" for="">Комментарий</label>
 								</div>
+								<!-- form__input3 -->
 								<div class="form__input form__input4">
 									<input id="checkbox" checked type="checkbox" name="agreement"
 										class="form__checkbox _req">
@@ -212,12 +239,18 @@
 										</span>
 									</label>
 								</div>
+								<!-- form__input4 -->
 								<button type="submit" class="form__submit">Отправить</button>
 							</form>
+							<!-- form__dispatch -->
 						</div>
+						<!-- form__question  -->
 					</div>
+					<!-- form__inner -->
 				</div>
+				<!-- __container -->
 			</div>
+			<!-- form -->
 		</main>
 
 		<footer class="footer">
